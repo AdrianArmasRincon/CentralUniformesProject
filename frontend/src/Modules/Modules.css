@@ -1,0 +1,192 @@
+body {
+    background-color: #ffffff;
+}
+
+.customBorderListMod {
+    margin-top: 9%;
+    width: 98%;
+    height: 40vh;
+    border-top: 0.6vh solid #DCDCDC;
+}
+
+.iconpos1 {
+    margin-left: 60%;
+    padding: 0.33%;
+    width: 2.3%;
+}
+
+.iconMarginMod {
+    padding-left: 3%;
+}
+
+.icon1PosDist {
+    margin-left: 80%;
+}
+
+.helpIcon {
+    margin-top: 3%;
+    margin-bottom: -1%;
+    margin-left: 3%;
+    width: 1.3vw !important;
+    height: 1.3vw !important;
+}
+
+.editModIconSize {
+    width: 2%;
+}
+
+.otherModIconSize {
+    width: 2.7%;
+}
+
+.customboxList{
+    margin-top: -6.7% !important;
+}
+/* Add these styles to make the page responsive */
+/* Tablet */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .myTitleModules {
+        margin-left: 10%;
+    }
+
+    .mySubtitleModules {
+        margin-left: 10%;
+        flex-direction: column;
+    }
+    .mySubtitleModules2 {
+        margin-left: 10%;
+        flex-direction: column;
+    }
+
+    .customBorderListMod {
+        width: 100% !important;
+        margin-left: 8%;
+    }
+
+    .customLoginModPos {
+        background-color: green;
+        display: none;
+    }
+
+
+    .myTitleModules {
+        margin-left: 10%;
+    }
+
+    .mySubtitleModules {
+        margin-left: 10%;
+    }
+
+    .customBorderListMod {
+        width: 100% !important;
+        margin-left: 4% !important;
+    }
+
+    .userContainer {
+        margin-top: -20% !important ;
+    }
+
+    .editModIconSize{
+        width:  8% !important;
+
+    }
+    
+    .otherModIconSize{
+        width:  8% !important;
+        margin-left: -2%;   
+    }
+
+    .iconpos3{
+        margin-left: -1%;
+    }
+    .iconpos1{
+        display:initial;
+        margin-left: 5%;
+        margin-right: -5%;
+    }
+
+    .iconPosBinMod{
+        margin-left: -6%;
+    }
+
+    .iconposTabletCustom{
+        margin-left: 3% !important;
+        margin-right: 5% !important;
+    }
+
+    .customboxList{
+        margin-top: -25% !important;
+        width: 100% !important;
+    }
+    .customboxList2{
+        margin-top: -15% !important;
+        width: 100% !important;
+    }
+    .customboxList3{
+        margin-top: -27.8% !important;
+    }
+}
+
+
+
+/* Mobile */
+@media only screen and (max-width: 426px) {
+    .myTitleModules {
+        margin-left: 10%;
+    }
+
+    .mySubtitleModules {
+        margin-left: 10%;
+    }
+
+    .customBorderListMod {
+        width: 100% !important;
+    }
+
+    .userContainer {
+        display: none;
+        margin-top: -20% !important ;
+    }
+
+    .editModIconSize{
+        width:  8% !important;
+
+    }
+    
+    .otherModIconSize{
+        width:  8.7% !important;
+        margin-left: -2%;   
+    }
+
+    .iconpos3{
+        margin-left: -1%;
+    }
+    .iconpos1{
+        display:initial;
+        margin-left: 5%;
+        margin-right: -5%;
+    }
+
+    .iconPosBinMod{
+        margin-left: -6%;
+    }
+    .customInputHome{
+        width: 100% !important;
+        margin-left: -2% !important;
+    }
+
+    .BtnMobileCssUpt{
+        width: 33% !important;
+        margin-left: 30% !important;
+    }
+
+    .helpIcon{
+        width: 8% !important;
+        height: 8% !important;
+    }
+
+    .customboxList3{
+        margin-top: -22% !important;
+        width: 100% !important;
+    }
+}

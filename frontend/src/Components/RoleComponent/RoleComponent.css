@@ -1,0 +1,16 @@
+.blockR{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    border-bottom: 0.6vh solid #ddd; 
+    padding: 10px;
+    align-items: center;
+}
+
+.contIdCent{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

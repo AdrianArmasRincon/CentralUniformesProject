@@ -1,0 +1,9 @@
+.userIconCustomStyle{
+    border-radius: 50%;
+}
+
+.componentId{
+    color: #000;
+    opacity: 100%;
+    font-weight: 600;
+}

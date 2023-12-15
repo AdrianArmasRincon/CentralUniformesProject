@@ -1,0 +1,219 @@
+    /*General css*/
+    body{
+        background-color: #F5F5F5;
+        font-family: "Roboto", sans-serif;
+    }
+
+    h1{
+        font-size:250%;
+        font-family: "Roboto", sans-serif, bold;
+
+    }
+
+    h3{
+        margin-bottom: 7%;
+        font-size:large;
+        font-weight:normal;
+    }
+
+    p{
+        font-size: small;
+        opacity: 46%;
+    }
+    
+    /*Division de la pantalla */
+    .vertical-split {
+        display: flex;
+        height: 100vh; 
+    }
+  
+    .left-half, .right-half {
+        
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        /* Añade otros estilos según tus necesidades */
+    }
+    .error {
+        color: red;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    
+    
+    /*left part css*/
+    .menulogo{
+        width: 10%;
+    }
+
+    .iconPosition{
+        margin-right: 70%;
+        margin-left: 7%;
+        margin-top: 5%;
+    }
+
+    .logoPosition{
+        margin-top: 5%;
+        margin-left: 13%;       
+    }
+
+
+    /*right part css*/
+    .right-half{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 90vh;
+        }
+
+    
+    .myButton{
+        width: 10%;
+        background-color: #69C04C;
+    }
+
+    .fieldDiv{
+        margin-top: 5%;
+    }
+
+    .btnDiv, p{
+        margin-top: 7%;
+    }
+
+    input {
+        margin-top: 3%;
+        height: 3ex;
+        width: 100%;
+        border-radius: 40px;
+        text-indent: 5%;
+        background-color: #F5F5F5;
+        border: 3px solid #F5F5F5; 
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.46); 
+      }
+
+    label{
+        margin-right: 33%;
+    }
+
+    .container {
+        text-align: start;
+        margin-left: -3%!important;
+      }
+
+
+/* Media queries for responsiveness */
+/* Tablet */
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .vertical-split {
+        
+    }
+
+    .h3CustomSizelI{
+        font-size: large !important;
+    }
+
+    label{
+        font-size: medium !important; 
+    }
+
+    .goToRegisterLI{
+        margin-left: -1%;
+        font-size: medium !important;
+    }
+    .container {
+        text-align: start;
+        margin-left: -3%!important;
+      }
+
+    .left-half, .right-half {
+        flex: none;
+        width: 100vw;
+    }
+
+    .right-half{
+        margin-top: 15%;
+        height: 50%;
+
+    }
+    .logoPosition {
+        margin-left: 20%;
+        margin-right: 0;
+        width: 50%;
+        display: none;
+        justify-content: center;
+    }
+    .iconPosition{
+        margin-left: 20%;
+        margin-right: 0;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .btnDiv, p {
+        margin-top: 5%;
+    }
+
+    .shadow-li{
+        width: 100% !important;
+    }
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 425px) {
+    .h3CustomSizelI{
+        font-size: small;
+    }
+    .goToRegisterLI{
+        margin-left: -1%;
+    }
+    .container {
+        text-align: start;
+        margin-left: -3%!important;
+      }
+
+    .left-half, .right-half {
+        flex: none;
+        width: 100vw;
+    }
+
+    .right-half{
+        margin-top: 15%;
+        height: 50%;
+
+    }
+    .logoPosition {
+        margin-left: 20%;
+        margin-right: 0;
+        width: 50%;
+        display: none;
+        justify-content: center;
+    }
+    .iconPosition{
+        margin-left: 20%;
+        margin-right: 0;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .btnDiv, p {
+        margin-top: 5%;
+    }
+
+    .shadow-li{
+        width: 100% !important;
+    }
+
+    label{
+        font-size: small !important; 
+    }
+
+    .goToRegisterLI{
+        margin-left: -1%;
+        font-size: small !important;
+    }
+}

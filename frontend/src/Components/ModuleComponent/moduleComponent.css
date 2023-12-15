@@ -1,0 +1,115 @@
+.customH4 {
+  font-weight: 100;
+}
+
+.customP {
+  opacity: 100%;
+}
+
+.customH2 {
+  font-weight: 500;
+  font-size: x-large;
+}
+
+
+/* Block.css */
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 99%;
+  border-bottom: 0.6vh solid #ddd;
+  padding: 10px;
+  align-items: center;
+}
+
+.block-section {
+  flex: 1;
+  text-align: center;
+}
+
+
+/* checkbox css */
+.checkbox-su[type="checkbox"] {
+  display: none;
+  margin-top: 0%;
+}
+
+.custom-checkbox-su {
+  /* New check box */
+  border: 2px solid #69C04C !important;
+  /* Borde verde */
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border-radius: 4px;
+  margin-top: 0%;
+}
+
+.custom-checkbox-su::before {
+  /* Nuevo custom pre tick */
+  /* Cambia el color de la marca de verificación (tick) cuando está marcado */
+  /* Unicode para una marca de verificación (✓) */
+  color: #69C04C;
+  /* Color de la marca de verificación verde */
+}
+
+.checkbox-su:checked+.custom-checkbox-su::before {
+  content: '\2713';
+  position: absolute;
+  color: #69C04C;
+  left: 25%;
+}
+
+
+/* Add these styles to make the page responsive */
+/* Tablet */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .stat {
+    display: block;
+    margin: 10px;
+    justify-content:right !important;
+    /* Ajusta los estilos de los componentes stat según tus necesidades */
+  }
+
+  #stat3,
+  #stat4 {
+    display: none;
+  }
+
+  .customboxList {
+    width: 100%;
+  }
+  .componentId{
+    font-size: large !important;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+  .block{
+    margin-left: 5% !important;
+  }
+  .stat {
+    display: flex;
+    justify-content:right !important;
+    margin: 10px;
+    /* Ajusta los estilos de los componentes stat según tus necesidades */
+  }
+
+  #stat3,
+  #stat4 {
+    display: none;
+  }
+
+  .customboxList {
+    width: 100% ; 
+  }
+
+  .componentId{
+    font-size: large !important;
+  }
+}

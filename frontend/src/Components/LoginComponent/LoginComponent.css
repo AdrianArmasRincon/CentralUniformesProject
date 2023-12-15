@@ -1,0 +1,44 @@
+.userContainer{
+    margin-top: -20%;
+    justify-content: right;
+    margin-bottom: 12%;
+    margin-left: 84%;
+    margin-right: 0%;
+}
+
+.LogInIconSize{
+    width:  25%;
+    height: 25%;
+}
+
+.loginusertxt{
+    font-size: x-large;
+    margin-top: -20%;
+    margin-left: 25%;
+}
+
+/* Tablet */
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .userContainer{
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 0%;
+    }
+
+    .loginusertxt{
+        display: none;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 426px) {
+    .userContainer{
+        width: 5vw;
+        height: 5vw;
+        /* margin-bottom: -20%; */
+    }
+
+    .loginusertxt{
+        display: none;
+    }
+}

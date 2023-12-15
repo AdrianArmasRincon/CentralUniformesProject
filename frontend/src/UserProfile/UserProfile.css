@@ -1,0 +1,79 @@
+.containerProfile {
+    height: 100vh;
+    size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F5F5F5;
+  }
+  
+  .contentProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+.boxImgProfile{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    
+  }
+
+  .boxProfile{
+    width: 39%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 15%; 
+    border: 2px solid #69C04C;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+.imgProfileAdjust{
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #69C04C;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: -5%;
+}
+
+.profileItemPos{
+    border-radius: initial;
+    border-radius: 40px;
+    margin-top: 5%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+strong{
+    opacity: 100% !important;
+    color: black;
+}
+
+.btnBottomLogOutProfile{    
+    margin-bottom: 1.5%;
+}
+
+.editProfilePic{
+  margin-top: 30%;
+}
+
+.btnColorSingOut{
+  background-color: #DC3E21;
+}
+
+.backgroundf{
+  text-align: left;
+}
+
+.mymarginProfileUser{
+  margin-left: 10% !important;
+}

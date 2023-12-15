@@ -1,0 +1,54 @@
+.customInput {
+  width: 40%;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border-color: #ffffff;
+  margin-top: -5%;
+  margin-bottom: 5%;
+  margin-left: 0%;
+}
+
+/* searchInputComponent.css */
+/* Default */
+.customInput .ant-btn-primary {
+  background-color: #69C04C;
+  border-color: #69C04C;
+  color: #ffffff;
+}
+
+/* Hover */
+.customInput:hover .ant-btn-primary:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+/* Anular el box-shadow predeterminado de manera más específica */
+.ant-input {
+  border-radius: 40px;
+  /* Ajusta el redondeo de los bordes según tus preferencias */
+  box-shadow: none !important;
+  /* Anula el box-shadow predeterminado */
+}
+
+
+/* Add these styles to make the page responsive */
+/* Tablet */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .customInput {
+    width: 85%;
+    margin-left: 12% !important;
+  }
+}
+
+
+
+/* Mobile */
+@media only screen and (max-width: 426px) {
+  .customInput {
+    width: 85%;
+    margin-left: 12%;
+  }
+  
+
+}

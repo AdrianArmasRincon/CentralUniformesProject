@@ -1,0 +1,469 @@
+body {
+  background-color: #ffffff;
+}
+
+/* Tite container */
+.h3CutomMarginH {
+  display: flex;
+  position: fixed;
+  margin-top: -5.6%;
+  width: 100%;
+  justify-content: left;
+  align-items: last baseline;
+}
+
+/* Icons */
+.iconpos5Pos {
+  margin-left: 60%;
+  width: 2.5%;
+}
+
+.icon5size {
+  width: 2.8% !important;
+  margin-right: 3%;
+  margin-top: 1%;
+}
+
+/* ant corousel classes */
+.slick-dots button {
+  /* display: none !important;; */
+  margin-top: 20% !important;
+  background-color: #69C04C !important;
+}
+
+.ant-carousel {
+  /* display: none; */
+  width: 97%;
+}
+
+/* Main container */
+.homeScreenSplitHome {
+  /* way to split the screen */
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: static;
+
+  margin-left: 1%;
+  margin-top: 0%;
+  border-top: 0.6vh solid #DCDCDC;
+}
+
+/* Grid boxes to split the screen */
+.leftHalf,
+.rightHalf {
+  flex: 1;
+}
+
+.leftHalf {
+  /* background-color: #3498db; */
+}
+
+.rightHalf {
+  margin-left: 5.7%;
+  /* background-color: #2ecc71; */
+}
+
+/* grid 1 */
+.customImgViewBoxH {
+  margin-top: 3%;
+  margin-left: -2%;
+  margin-right: 33%;
+  width: 40vw;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
+/* grid 1 content*/
+.customImgH {
+  width: 100%;
+  height: 40vh;
+  max-width: 100%;
+  max-height: 50vh;
+  border-radius: 40px;
+  border: 2px solid #69C04C;
+}
+
+
+/* grid 2 */
+/* Description and button */
+.customPHomeDContainer {
+  margin-top: 3%;
+  margin-left: 0%;
+  margin-right: 33%;
+  width: 40vw;
+  height: 40vh;
+  border-radius: 40px;
+  border: 2px solid #69C04C;
+  background-color: #f5f5f5;
+}
+
+/* grid 2 content */
+.customPHomeD {
+  opacity: 100%;
+  margin-left: 10%;
+  margin-top: 3%;
+  height: 70%;
+  width: 80%;
+  border: none;
+  background-color: initial;
+  outline: none;
+  resize: none;
+  pointer-events: none;
+  /* background-color: red; */
+}
+
+
+.iconMarginModHome {
+  padding-left: 3%;
+}
+
+.iconpos3 {
+  margin-left: 0%;
+}
+
+.customInputHome {
+  width: 80%;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.componentSize {
+  width: 100%;
+  height: 100%;
+}
+
+.customInputHomeTxt {
+  padding: 1.5%;
+  margin-top: 3%;
+  height: 20ex !important;
+  border-radius: 30px;
+  text-indent: 5%;
+  background-color: #F5F5F5;
+  border: 3px solid #F5F5F5;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.46);
+
+  width: 80%;
+  margin-bottom: 10%;
+  justify-content: center;
+  margin-left: 10%;
+  height: 20vh;
+  word-wrap: break-word;
+}
+
+.popOverStyleBtn {
+  border: 2px solid #69C04C;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  width: 3%;
+  height: 3%;
+}
+
+.popOverStyle {
+  border: 2px solid #69C04C;
+  background-color: #F5F5F5;
+  border-radius: 5%;
+}
+
+.ant-popover {
+  border: 2px solid #69C04C;
+  background-color: #F5F5F5;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+textarea {
+  resize: none;
+  font-size: large;
+}
+
+.ant-popover-title {
+  text-align: center;
+  font-size: x-large;
+}
+
+/* .anticon:hover{
+    background-color: #69C04C;
+    border-color: #69C04C;
+    color: white;
+  }
+
+  .ant-btn:hover{
+    background-color: #69C04C;
+    border-color: #69C04C;
+  } */
+
+.ant-popover-inner-content {
+  padding: 10px;
+  /* Añade un relleno interno al contenido del Popover */
+  color: #69C04C;
+}
+
+.customFormHomeStyle {
+  margin-left: 0% !important;
+  width: 100% !important;
+}
+
+/* Add these styles to make the page responsive */
+@media only screen and (max-width: 4000px) {
+  .vertical-split {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .left-half,
+  .right-half {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .iconPosition {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 5%;
+  }
+
+  .logoPosition {
+    margin-top: 5%;
+    margin-left: 0;
+  }
+
+  .right-half {
+    height: auto;
+  }
+
+  .container {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /* Agregar estilos para la etiqueta img */
+  .logoPosition img {
+    width: 100%;
+    /* Ajusta el ancho según sea necesario */
+    height: auto;
+  }
+
+  /* Agregar estilos para el formulario */
+  form {
+    width: 80%;
+    margin-top: 20px;
+    justify-content: center !important;
+    /* Ajusta el margen según sea necesario */
+  }
+}
+
+  /* Add these styles to make the page responsive */
+  /* Tablet example: 768 * 1280 */
+  @media only screen and (min-width: 425px) and (max-width: 768px) {
+
+    .leftHalf,
+    .customImgViewBoxH,
+    .customImgH {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+
+    }
+
+    .vertical-split {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .homeScreenSplitHome {
+      margin-top: 14% !important;
+    }
+
+
+    .customPHomeDContainer {
+      width: 90%;
+      margin-left: 2%;
+      /* z-index: 1 !important; */
+    }
+
+    .h3CutomMarginH {
+      margin-left: 10%;
+      /* margin-right: 50% !important; */
+      margin-top: 0%;
+    }
+
+    .ant-carousel,
+    .slick-slider {
+      width: 100%;
+    }
+
+    .btnMobileVersionHome {
+      font-size: small;
+      width: 60% !important;
+      margin-left: 20% !important;
+    }
+
+    .carouselPos {
+      margin-top: 15% !important;
+      margin-left: 10%;
+      width: 90%;
+    }
+
+    .logInComponentNone {
+      margin-top: 50%;
+    }
+
+    /* Icons */
+    .iconpos5Pos {
+      margin-left: 20%;
+
+    }
+
+    .popOverStyleBtn {
+      width: 15% !important;
+    }
+
+
+    .homeScreenSplitHome {
+      margin-top: 0%;
+    }
+
+    .customSideBarPos {
+      /* z-index: 2 !important; */
+    }
+
+    .customPHomeDContainer {
+      width: 90%;
+      margin-left: 5%;
+      /* z-index: 1 !important; */
+    }
+
+    .h3CutomMarginH {
+      margin-left: 10%;
+      margin-top: -20%;
+    }
+
+    .ant-carousel,
+    .slick-slider {
+      /* z-index: 0 !important; */
+    }
+
+    .btnMobileVersionHome {
+      font-size: small;
+      width: 60% !important;
+      margin-left: 20% !important;
+    }
+
+    .carouselPos {
+      margin-left: 10%;
+      width: 90%;
+      margin-top: -15% !important;
+    }
+
+    .customFormHomeStyle {
+      margin-left: 0% !important;
+      width: 100% !important;
+    }
+
+    
+    .iconpos37 {
+      margin-left: 0.1% !important;  
+      margin-right: 1% !important;    
+
+    }
+    .customInputHomeTxt{
+      width: 80% !important;
+    }
+
+    .customInputHome{
+      width: 80% !important;
+    }
+    .BtnTabletCssUpt{
+      width: 33% !important;
+      justify-content: center;
+      text-align: center;
+    }
+    textarea{
+      font-size: x-large !important;
+    }
+  }
+
+
+
+  /* Mobile example: 425 * 900 */
+  @media only screen and (max-width: 425px) {
+    textarea{
+      font-size: large !important;
+    }
+    .leftHalf,
+    .customImgViewBoxH,
+    .customImgH {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+
+    }
+
+    .vertical-split {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .homeScreenSplitHome {
+      margin-top: 14%;
+    }
+
+    .customSideBarPos {
+      /* z-index: 2 !important; */
+    }
+
+    .customPHomeDContainer {
+      width: 90%;
+      margin-left: -5.5%;
+      /* z-index: 1 !important; */
+    }
+
+    .h3CutomMarginH {
+      margin-left: 10%;
+      /* margin-right: 50% !important; */
+      margin-top: 0%;
+    }
+
+    .ant-carousel,
+    .slick-slider {
+      width: 100%;
+      margin-left: 4%;
+    }
+
+    .btnMobileVersionHome {
+      font-size: small;
+      width: 60% !important;
+      margin-left: 20% !important;
+    }
+
+    .carouselPos {
+      margin-top: 15% !important;
+      width: 100%;
+    }
+
+    .logInComponentNone {
+      margin-top: 50%;
+    }
+
+    /* Icons */
+    .iconpos5Pos {
+      margin-left: 20%;
+    }
+
+    .popOverStyleBtn {
+      width: 5% !important;
+    }
+
+    .customFormMo {
+      margin-left: 10% !important;
+    }
+    .customFormHomeStyle {
+      margin-left: 0% !important;
+      width: 100% !important;
+    }
+  }

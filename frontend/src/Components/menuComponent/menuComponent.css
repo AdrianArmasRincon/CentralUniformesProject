@@ -1,0 +1,50 @@
+body{
+    background-color: #FFFFFF;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8vw; 
+    height: 100vh; 
+    background-color: #dcdcdc; 
+    color: #000000;
+  }
+
+  .myMargin{
+    margin-top: 80%;
+    margin-left: 30%;
+  }
+
+
+  /* Tablet */
+  @media only screen and (min-width: 425px) and (max-width: 768px) {
+    .sidebar {
+      width: 10vw; 
+      height: 100vh !important;
+    }
+
+    .myMargin{
+      width: 100%;
+      justify-content: left;
+    }
+  }
+
+
+  /* Mobile */
+  @media only screen and (max-width: 768px) {
+    .sidebar {
+      width: 17vw; 
+      height: 110vh !important;
+    }
+
+    .myMargin{
+      width: 100%;
+      justify-content: left;
+    }
+
+    .app-container{
+
+    }
+  }

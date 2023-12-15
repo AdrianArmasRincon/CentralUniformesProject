@@ -1,0 +1,439 @@
+    /*General css*/
+    body {
+        background-color: #F5F5F5;
+        font-family: "Roboto", sans-serif;
+    }
+
+    h1 {
+        font-size: 250%;
+        font-family: "Roboto", sans-serif, bold;
+
+    }
+
+    h3 {
+        margin-bottom: 7%;
+        font-size: x-large;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: medium;
+        opacity: 46%;
+    }
+
+    form {
+        margin-top: -4%;
+        margin-left: -10%;
+    }
+
+    /*Division de la pantalla */
+    .vertical-split-su {
+        display: flex;
+        height: 100vh;
+    }
+
+    .left-half-su,
+    .right-half-su {
+
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        /* Añade otros estilos según tus necesidades */
+    }
+
+    /*left part css*/
+    .menulogo-su {
+        width: 10%;
+    }
+
+    .iconPosition-su {
+        margin-right: 70%;
+        margin-left: 7%;
+        margin-top: 5%;
+    }
+
+    .logoPosition-su {
+        margin-top: 5%;
+        margin-left: 13%;
+    }
+
+
+    /*right part css*/
+    .right-half-su {
+        margin-top: 0%;
+    }
+
+
+    .myButton-su {
+        width: 10%;
+        background-color: #69C04C;
+    }
+
+    .fieldDiv-su {
+        margin-top: 5%;
+    }
+
+    .btnDiv,
+    p {
+        margin-top: 7%;
+    }
+
+    .shadow-su {
+        margin-top: 3%;
+        height: 3ex;
+        width: 86%;
+        border-radius: 40px;
+        text-indent: 5%;
+        background-color: #F5F5F5;
+        border: 3px solid #F5F5F5;
+        /* Establece el borde con el mismo color de fondo */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.46);
+        /* Añade una sombra con opacidad del 46% en el borde inferior */
+    }
+
+    label {
+        font-size: large;
+        margin-right: 33%;
+    }
+
+    .container-su {
+        text-align: left;
+        margin-left: 24%;
+        margin-top: 2%;
+    }
+
+    .shadow-su {}
+
+    .terms-su {
+        margin-bottom: 4%;
+        color: rgb(132, 132, 132);
+    }
+
+    a {
+        /*Default values*/
+        border: initial;
+        background-color: initial;
+        color: initial;
+        box-shadow: none;
+        text-decoration: none;
+
+    }
+
+    .login-su {
+        margin-left: 15%;
+        margin-top: -1%;
+    }
+
+    /*standar checkbox*/
+    .checkbox-su[type="checkbox"] {
+        display: none;
+    }
+
+    .custom-checkbox-su {
+        border: 2px solid #69C04C !important;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        border-radius: 4px;
+
+    }
+
+
+    .custom-checkbox-su::before {
+        color: #69C04C;
+    }
+
+    .checkbox-su:checked+.custom-checkbox-su::before {
+        content: '\2713';
+        position: absolute;
+        color: #69C04C;
+        left: 25%;
+        top: -15%;
+    }
+
+    .terms {
+        opacity: initial;
+        padding-left: 5%;
+    }
+
+
+    .chckbxPdding {
+        margin-bottom: -5%;
+    }
+
+
+    .customTopRegister {
+        margin-top: 3%;
+    }
+
+    .customFormMo3 {
+        margin-left: 4%;
+    }
+
+    .goToLogIn {
+        margin-left: 10% !important;
+    }
+
+    /* Tablet */
+    @media only screen and (min-width: 426px) and (max-width: 768px) {
+        .container-su {
+            width: 100%;
+            justify-content: left;
+            margin-left: 8%;
+        }
+
+        .myTitle {
+            font-size: xx-large !important;
+            margin-left: -25%;
+            margin-top: 10%;
+            justify-content: center;
+        }
+
+        .mySubtitle {
+            font-size: medium !important;
+            margin-left: -25%;
+            margin-bottom: 5%;
+        }
+
+        .login-su {
+            margin-top: 10%;
+        }
+
+        .terms-su {
+            margin-top: 15%;
+        }
+
+        .shadow-su {
+            width: 100% !important;
+        }
+
+        label,
+        p {
+            font-size: small !important;
+            width: 90%;
+        }
+
+        p {
+            font-size: x-small !important;
+            margin-left: 10%;
+        }
+
+
+        input,
+        .buttonStyle {
+            height: 100% !important;
+            width: 0% !important;
+        }
+
+        .goToLogIn {
+            margin-left: -10%;
+            margin-top: -3%;
+            margin-bottom: 5%;
+        }
+
+        .buttonStyle {
+            text-align: center;
+            font-size: x-small;
+            height: 100%;
+            width: 10%;
+        }
+
+        .vertical-split-su {}
+
+        .left-half-su {
+            display: block;
+            padding: 0px;
+            height: 80%;
+
+        }
+
+        .left-half-su,
+        .right-half-su {
+            flex: none;
+            width: 100vw;
+            height: 80% !important;
+        }
+
+        .right-half-su {
+            margin-left: -90%;
+            justify-content: left;
+            margin-top: 15%;
+            height: 50%;
+        }
+
+        .logoPosition-su {
+            display: none;
+            justify-content: center;
+        }
+
+        .iconPosition-su {
+            /* margin-right: 100%; */
+            margin-left: 0%;
+            margin-top: 5%;
+
+
+            margin-left: 20%;
+            margin-right: 0;
+            top: 0px;
+            width: 50%;
+            /* display:flexbox; */
+            justify-content: left;
+        }
+
+        .goToLogIn,
+        .terms {
+            font-size: medium !important;
+        }
+
+        .buttonContainerStyle,
+        p {
+            margin-top: 5%;
+        }
+
+        .goToLogIn {
+            margin-left: -10% !important;
+            margin-top: -3%;
+            margin-bottom: 5%;
+        }
+
+        .customFormMo3 {
+            margin-left: -9%;
+        }
+    }
+
+
+
+    /* Media queries for responsiveness */
+    @media only screen and (max-width: 425px) {
+        .container-su {
+            width: 100%;
+            justify-content: left;
+            margin-left: 8%;
+        }
+
+        .myTitle {
+            font-size: xx-large !important;
+            margin-left: -25%;
+            margin-top: 10%;
+            justify-content: center;
+
+        }
+
+        .mySubtitle {
+            font-size: small !important;
+            margin-left: -25%;
+            margin-bottom: 5%;
+        }
+
+        .login-su {
+            margin-top: 10%;
+        }
+
+        .terms-su {
+            margin-top: 15%;
+        }
+
+        .shadow-su {
+            width: 90% !important;
+        }
+
+        label,
+        p {
+            font-size: small !important;
+            width: 90%;
+        }
+
+        p {
+            font-size: x-small !important;
+            margin-left: 10%;
+        }
+
+
+        input,
+        .buttonStyle {
+            height: 100% !important;
+            width: 0% !important;
+        }
+
+        .goToLogIn {
+            margin-left: -10%;
+            margin-top: -3%;
+            margin-bottom: 5%;
+        }
+
+        .buttonStyle {
+            text-align: center;
+            font-size: x-small;
+            height: 100%;
+            width: 10%;
+        }
+
+        .vertical-split-su {}
+
+        .left-half-su {
+            display: block;
+            padding: 0px;
+            height: 80%;
+
+        }
+
+        .left-half-su,
+        .right-half-su {
+            flex: none;
+            width: 100vw;
+            height: 80% !important;
+        }
+
+        .right-half-su {
+            margin-left: -90%;
+            justify-content: left;
+            margin-top: 15%;
+            height: 50%;
+        }
+
+        .logoPosition-su {
+            display: none;
+            justify-content: center;
+        }
+
+        .iconPosition-su {
+            /* margin-right: 100%; */
+            margin-left: 0%;
+            margin-top: 5%;
+
+
+            margin-left: 20%;
+            margin-right: 0;
+            top: 0px;
+            width: 50%;
+            /* display:flexbox; */
+            justify-content: left;
+        }
+
+
+        .buttonContainerStyle,
+        p {
+            margin-top: 5%;
+        }
+
+        .goToLogIn,
+        .terms {
+            font-size: small !important;
+            margin-right: 40%;
+            width: 80%;
+            text-align: center;
+            margin-left: -1%;
+
+        }
+
+        .goToLogIn {
+            margin-left: -13% !important;
+        }
+
+        .customFormMo3 {
+            margin-left: -6%;
+        }
+    }
