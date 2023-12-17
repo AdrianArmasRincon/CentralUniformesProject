@@ -50,6 +50,7 @@
         <li><a href="#Repositories">Repositories</a></li>
         <li><a href="#Planning">Planning</a></li>
         <li><a href="#Conclusions">Conclusions</a></li> 
+        <ul><li><a href="#Would-i-have-chosen-another-technology?">Would i have chosen another technology?</a></li></ul> 
       </ul>
     </li>
     <li>
@@ -98,6 +99,7 @@
         <li><a href="#Repositorios">Repositorios</a></li>
         <li><a href="#Planificación">Planificación</a></li>
         <li><a href="#Conclusiones">Conclusiones</a></li> 
+         <ul><li><a href="#¿Hubiese-escogido-otra-tecnología?">¿Hubiese escogido otra tecnología?</a></li></ul>
       </ul>
     </li>
   </ol>
@@ -499,88 +501,10 @@ For the organization of the project I have followed the recommendation of the wo
 
 
 # Conclusions
+ReactJS and Laravel form a powerful and versatile combination for web development. React, a JavaScript library, excels in building interactive and dynamic user interfaces, offering a component-based structure for efficient development. Laravel, a PHP framework, provides a robust backend with features like Eloquent ORM ensuring scalability and maintainability. Their seamless integration enables the creation of modern, high-performance web applications with a responsive user interface. React's virtual DOM optimizes rendering, enhancing the user experience, while Laravel's expressive syntax simplifies backend logic. Together, they foster a productive and scalable development environment, making them a popular choice for building feature-rich and performant web applications.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Would-i-have-chosen-another-technology?
+In terms of comfort, I would have chosen another technology such as angular, express or sequelize because I have worked with them for longer, or with Mongo due to its simplicity, but that does not mean that I have learned a lot with these new technologies
 
 
 
@@ -967,3 +891,8 @@ Para la organización del proyecto he seguido la recomendación de la distribuci
 
 
 # Conclusiones
+ReactJS y Laravel forman una combinación potente y versátil para el desarrollo web. React, una biblioteca de JavaScript, se destaca en la creación de interfaces de usuario interactivas y dinámicas, ofreciendo una estructura basada en componentes para un desarrollo eficiente. Laravel, un marco PHP, proporciona un backend robusto con características como Eloquent ORM que garantizan escalabilidad y mantenibilidad. Su perfecta integración permite la creación de aplicaciones web modernas y de alto rendimiento con una interfaz de usuario responsiva. El DOM virtual de React optimiza el renderizado, mejorando la experiencia del usuario, mientras que la sintaxis expresiva de Laravel simplifica la lógica del backend. Juntos, fomentan un entorno de desarrollo productivo y escalable, lo que los convierte en una opción popular para crear aplicaciones web de alto rendimiento y ricas funciones.
+
+
+## ¿Hubiese-escogido-otra-tecnología
+En cuanto a comodidad, hubiera elegido otra tecnología como angular, express o sequelize porque llevo más tiempo trabajando con ellas, o con Mongo por su sencillez, pero eso no quita que haya aprendido mucho con estas nuevas tecnologías
