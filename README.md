@@ -120,6 +120,8 @@ Limited Device Access, web apps may not have full access to device-specific feat
 Web apps may have slightly slower performance compared to native apps, because they are not done to an specific hardware and software.
 And web apps may not perform as well as native apps in offline mode, like natives.
 
+The company uses a web app to redirect to other apps because it is always active, connected and updated, and it makes it easier to access it to everybody from all kind of dispositives.
+
 
 ## Where-does-the-need-arise-from?
 This project is made to help the access and management of users, roles and links of a company, to facilitate both the management and use of the intranet and its apps.
@@ -416,7 +418,9 @@ I also have error control that makes it easier for the user to enter input requi
 # Manuals
 ## User manual
 The user manual is located in the public folder of the frontend, and is accessed from the following button:
-######################################### PONER IMAGEN BOTÓN para el manual de usuario
+![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/6ed36306-bced-43cb-a3f2-bb4280dca663)
+![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/9821b66e-25b0-4a95-9f07-6b2a705341b4)
+
 ![user manual](https://github.com/AdrianArmasRincon/CentralUniformes/assets/146866842/c3f56ea5-7627-4f0e-ba4b-ab8bcc069caa)
 
 
@@ -878,7 +882,9 @@ También tengo control de errores que facilitan la introducción de los requisit
 # Manuales
 ## Manual de usuario
 El manual de usuario se encuentra en la carpeta public del frontend, y se accede desde el siguiente botón:
-######################################### PONER IMAGEN BOTÓN para el manual de usuario
+#![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/0c483567-2cc8-4731-88e0-1d9a7d51d408)
+![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/c0f43577-652c-4e69-8389-3186784e1ee9)
+
 ![user manual](https://github.com/AdrianArmasRincon/CentralUniformes/assets/146866842/c3f56ea5-7627-4f0e-ba4b-ab8bcc069caa)
 
 
