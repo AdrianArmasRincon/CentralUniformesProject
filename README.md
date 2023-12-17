@@ -417,7 +417,7 @@ I also have error control that makes it easier for the user to enter input requi
 
 # Manuals
 ## User manual
-The user manual is located in the public folder of the frontend, and is accessed from the following button:
+The user manual is located in the public folder of the frontend, and is accessed from the following button:                                              
 ![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/6ed36306-bced-43cb-a3f2-bb4280dca663)
 ![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/9821b66e-25b0-4a95-9f07-6b2a705341b4)
 
@@ -881,7 +881,7 @@ También tengo control de errores que facilitan la introducción de los requisit
 
 # Manuales
 ## Manual de usuario
-El manual de usuario se encuentra en la carpeta public del frontend, y se accede desde el siguiente botón:
+El manual de usuario se encuentra en la carpeta public del frontend, y se accede desde el siguiente botón:                                 
 #![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/0c483567-2cc8-4731-88e0-1d9a7d51d408)
 ![image](https://github.com/AdrianArmasRincon/CentralUniformesProject/assets/146866842/c0f43577-652c-4e69-8389-3186784e1ee9)
 
