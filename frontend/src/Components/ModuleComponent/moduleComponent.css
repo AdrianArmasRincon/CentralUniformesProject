@@ -15,6 +15,16 @@
 /* Block.css */
 .block {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 99%;
+  border-bottom: 0.6vh solid #ddd;
+  padding: 10px;
+  align-items: center;
+}
+
+.block2 {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 99%;
@@ -23,93 +33,72 @@
   align-items: center;
 }
 
+.appicon{
+  max-width: 250px;
+  max-height: 200px;
+}
+
 .block-section {
   flex: 1;
   text-align: center;
 }
 
 
-/* checkbox css */
-.checkbox-su[type="checkbox"] {
-  display: none;
+.moduleiconStyle{
+  width: 100% !important;
+  opacity: 100% !important;
+}
+
+.customposiconmodule{
+  width: 20% !important;
+  margin-left: -100% !important;
   margin-top: 0%;
+  margin-right: 30%;
+  text-align: center;
 }
 
-.custom-checkbox-su {
-  /* New check box */
-  border: 2px solid #69C04C !important;
-  /* Borde verde */
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  border-radius: 4px;
-  margin-top: 0%;
+.editiconModules{
+  width: 50% !important;
+  height: 50% !important;
 }
 
-.custom-checkbox-su::before {
-  /* Nuevo custom pre tick */
-  /* Cambia el color de la marca de verificación (tick) cuando está marcado */
-  /* Unicode para una marca de verificación (✓) */
-  color: #69C04C;
-  /* Color de la marca de verificación verde */
+.largeIcon {
+  font-size: 24px; /* Ajusta el tamaño según tus necesidades */
 }
 
-.checkbox-su:checked+.custom-checkbox-su::before {
-  content: '\2713';
-  position: absolute;
-  color: #69C04C;
-  left: 25%;
+.borders{
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  text-align: center;
 }
-
-
-/* Add these styles to make the page responsive */
-/* Tablet */
-@media only screen and (min-width: 426px) and (max-width: 768px) {
-  .stat {
-    display: block;
-    margin: 10px;
-    justify-content:right !important;
-    /* Ajusta los estilos de los componentes stat según tus necesidades */
+@media only screen and (max-width: 767px) {
+  .block2 {
+    margin-bottom: 20px; /* Ajusta según tus necesidades */
   }
 
-  #stat3,
-  #stat4 {
-    display: none;
+  .customposiconmodule {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 5% !important;
+    margin-right: 0 !important;
+    text-align: center;
   }
-
-  .customboxList {
-    width: 100%;
+  .mobileEditM {
+    width: 15px; 
+    font-size: 24px;
   }
-  .componentId{
-    font-size: large !important;
+  .moduleiconStyle{
+    width: 50% !important;
+    opacity: 100% !important;
   }
-}
-
-/* Mobile */
-@media only screen and (max-width: 425px) {
-  .block{
-    margin-left: 5% !important;
+  .largeIcon {
+    font-size: 18px; /* Ajusta el tamaño según tus necesidades */
   }
-  .stat {
-    display: flex;
-    justify-content:right !important;
-    margin: 10px;
-    /* Ajusta los estilos de los componentes stat según tus necesidades */
+  .iconBorderEditM{
+    margin-right: 20% !important;
   }
-
-  #stat3,
-  #stat4 {
-    display: none;
-  }
-
-  .customboxList {
-    width: 100% ; 
-  }
-
-  .componentId{
-    font-size: large !important;
+  .infosizeUrl{
+    font-size: medium !important;
   }
 }

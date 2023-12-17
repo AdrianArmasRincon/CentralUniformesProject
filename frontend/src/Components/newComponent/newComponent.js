@@ -4,7 +4,8 @@ import { Button, Popover, notification } from 'antd';
 import { useNavigate, Link } from "react-router-dom";
 import './newComponent.css'
 import { Icon } from '@iconify/react';
-
+import { EditFilled} from '@ant-design/icons';
+import MenuComponent from '../menuComponent/menuComponent';
 
 
 function NewComponent() {
@@ -12,15 +13,37 @@ function NewComponent() {
         backgroundColor: '#69C04C',
         borderColor: '#69C04C',
         color: 'white',
-        width: '25%',
+        width: '50%',
         borderRadius: '40px',
         marginTop: '5%',
         marginBottom: '5%',
-        marginLeft: '38%',
+        marginLeft: '-28%',
+        marginRight: '20%',
+    };
+    const buttonStyle24 = {
+        backgroundColor: 'red',
+        borderColor: 'red',
+        color: 'white', 
+        width: '60%',
+        borderRadius: '40px',
+        marginTop: '5%',
+        marginBottom: '5%',
+        marginLeft: '-28%',
+        marginRight: '20%',
+    };
+    const buttonStyle1 = {
+        backgroundColor: '#69C04C',
+        borderColor: '#69C04C',
+        color: 'white',
+        width: '50%',
+        borderRadius: '40px',
+        marginTop: '5%',
+        marginBottom: '5%',
+        marginLeft: '28%',
         marginRight: 'auto',
     };
     const buttonStyle2 = {
-        backgroundColor: '#69C04C',
+        backgroundColor: 'red',
         borderColor: '#69C04C',
         color: 'white',
         width: '50%',
@@ -156,14 +179,14 @@ function NewComponent() {
             <form onSubmit={(e) => { e.preventDefault(); handleUpdate(news); }}
                 action="#" method="post" enctype="multipart/form-data" className='customFormMo customFormHomeStyle'>
 
-                <label className='customInputHome' htmlFor="title">Module name:</label>
+                <label className='customInputHome' htmlFor="title">Notice name:</label>
                 <input type="text" className='customInputHome' id="title" placeholder={news.title}
                     value={newNews.title}
                     onChange={(e) => setNewNews({ ...newNews, title: e.target.value })} />
                 <br /><br />
 
                 <label className='customInputHome' htmlFor="content">Content:</label>
-                <input type="text" className='customInputHome' id="content" placeholder={news.content}
+                <input type="text" className='customInputHomeTxt' id="content" placeholder={news.content}
                     value={newNews.content}
                     onChange={(e) => setNewNews({ ...newNews, content: e.target.value })} />
                 <br /><br />
@@ -175,9 +198,9 @@ function NewComponent() {
                 <br /><br />
 
 
-                <Button type="primary" htmlType="submit" style={buttonStyle} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
+                <Button type="primary" htmlType="submit" style={buttonStyle1} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
                 &nbsp;&nbsp;
-                <Button onClick={() => hide()} type="primary" className='BtnMobileCssUpt BtnTabletCssUpt' >Cancel</Button>
+                <Button onClick={() => hide()} type="primary" style={buttonStyle2} className='BtnMobileCssUpt BtnTabletCssUpt' >Cancel</Button>
             </form>
         </div>
     );
@@ -186,32 +209,33 @@ function NewComponent() {
     return (
         /*Codigo del block de modulo*/
         <div className="block">
+            <MenuComponent/> 
             {Array.isArray(News) &&
                 News.map((news, index) => (
-                    <div key={news.id} style={{ marginBottom: '20px' }} className='block'>
-                        <div className='list-news'>
-                            <p className='borders'>{news.title}</p>
+                    <div key={news.id} style={{ marginBottom: '20px' }} className='block2'>
+                        <div>
+                            <p className='infosizeUrl'>{news.title}</p>
                         </div >
+                        <div>
+                            <p className='infosizeUrl'>{news.content}</p>
+                        </div>
                         <div className='list-news'>
-                            <p className='borders'>{news.content}</p>
-                        </div >
-                        <div className='list-news'>
-                            <img className='borders newsImage' alt='icon1' src={`http://localhost:8000/images/${news.image}`}></img>
+                            <img className='appicon' alt='icon1' src={`http://localhost:8000/images/${news.image}`}></img>
                         </div>
                         <div className='list-news email-space'>
-                            <p className='borders'>
-                                <Button onClick={() => handleDelete(news.id)} type="primary" className='ButtonDelete'>Delete</Button>
-                                &nbsp;&nbsp;
-                                <Popover
-                                    content={UpdateForm(news, index)}
-                                    trigger="click"
-                                    forceRender={true}
-                                    open={open[index]}
-                                    onOpenChange={(e) => handleOpenChange(e, index)}
-                                >
-                                    <Button type="primary" className='ButtonUpdate'>Update</Button>
+                            <h1 className='borders'>
+                                {/* edit */}
+                                <Popover content={UpdateForm(news, index)} placement="left" title="Update module" trigger="click" className=' customposiconmodule ' 
+                                forceRender={true} open={open[index]} onOpenChange={(e) => handleOpenChange(e, index)}>
+                                <EditFilled className='iconBorderEditM'/>
                                 </Popover>
-                            </p>
+                                {/* delete */}
+                                <Button onClick={() => handleDelete(news.id)} type="primary" className="mobileBtnPos2" style={buttonStyle24} >Delete</Button>
+                                &nbsp;&nbsp;
+                                
+                                
+
+                            </h1>
                         </div>
                     </div>
                 ))}

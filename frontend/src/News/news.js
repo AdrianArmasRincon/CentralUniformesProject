@@ -22,10 +22,10 @@ function News() {
         marginTop: '2%',
         marginBottom: '5%',
         marginLeft: '38%',
-        marginRight: 'auto',
+ 
     };
     const buttonStyle2 = {
-        backgroundColor: '#69C04C',
+        backgroundColor: 'red',
         borderColor: '#69C04C',
         color: 'white',
         width: '50%',
@@ -33,9 +33,18 @@ function News() {
         marginTop: '2%',
         marginBottom: '5%',
         marginLeft: '28%',
-        marginRight: 'auto',
-    };
 
+    };
+    const buttonStyle3 = {
+      backgroundColor: '#69C04C',
+      borderColor: '#69C04C',
+      color: 'white',
+      width: '50%',
+      borderRadius: '40px',
+      marginTop: '2%',
+      marginBottom: '5%',
+      marginLeft: '28%',
+  };
 
     const hidec = () => {
         setOpenC(false);
@@ -171,11 +180,11 @@ function News() {
             <form action="#" method="post" enctype="multipart/form-data" className='customFormHomeStyle'>
 
                 <div>
-                    <label htmlFor="title" className='customInputHome'>Título:</label><br />
+                    <label htmlFor="title" className='customInputHome'>Title:</label><br />
                     <input
                         type="text"
                         id="title"
-                        className='customInputHomeTxt'
+                        className='customInputHome'
                         value={newNews.title}
                         onChange={(e) => setNewNews({ ...newNews, title: e.target.value })}
                     />
@@ -196,7 +205,7 @@ function News() {
                 <div>
                     <label htmlFor="image" className='customInputHome'>Image:</label><br />
                     <input
-                    className='customInputHomeTxt'
+                    className='customInputHome'
                     type="file"
                     id="image"
                     accept="image/*"
@@ -205,9 +214,9 @@ function News() {
                 </div>
                 <br></br>
 
-                <Button type="primary"  htmlType="submit" value="Add" style={buttonStyle} className='BtnMobileCssUpt BtnTabletCssUpt'>Create</Button>
+                <Button type="primary"  htmlType="submit" value="Add" style={buttonStyle3} className='BtnMobileCssUpt BtnTabletCssUpt'>Create</Button>
                 &nbsp;&nbsp;
-                <Button type="primary" onClick={hidec} className='ButtonDelete'>Cancel</Button>
+                <Button type="primary" onClick={hidec} style={buttonStyle2} className='ButtonDelete'>Cancel</Button>
             </form>
         </div>
     );
@@ -255,7 +264,7 @@ function News() {
                 <input type="number" className='customInputHome' id="idNew" name="idNew" required />
                 <br /><br />
 
-                <input type="submit" value="Delete " style={buttonStyle2} className='BtnMobileCssUpt BtnTabletCssUpt'>
+                <input type="submit" value="Delete " style={buttonStyle2} className='BtnMobileCssUpt '>
                 </input>
             </form>
         </div>
@@ -263,21 +272,14 @@ function News() {
     return (
         <div style={{ textAlign: 'left', marginLeft: '10%', marginTop: '8%' }}>
 
-            <h1 className='myTitleModules'>Modules</h1>
-            <h3 className='mySubtitleModules'>Allowed modules
-
-                {/* FALTA FUNCIONALIDAD -------------------------------------------------------------------------------------------------------- */}
-
-
+            <h1 className='myTitleModules'>News</h1>
+            <h3 className='mySubtitleModules'>News management
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Popover content={formAddPopOver} placement="left" title="Add module" trigger="click" className='popOverStyleBtn'>
+                <Popover content={formAddPopOver} placement="left" title="Add new" trigger="click" className='popOverStyleBtn'>
                     <Icon icon="ant-design:plus-circle-filled" className='iconpos3 otherModIconSize iconposTabletCustom' />
                 </Popover>
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                {/* <Popover content={formPopOverDelete} placement="left" title="Delete module" trigger="click" className='popOverStyleBtn'>
-          <Icon icon="ant-design:delete-filled" className='iconpos3 iconPosBinMod otherModIconSize' />
-        </Popover>     */}
             </h3>
             <br /> <br /> <br /> <br /><br />
             <div className='customBorderListMod customboxList customboxList3'>
@@ -286,20 +288,6 @@ function News() {
 
         </div>
     );
-    // <div style={{ textAlign: 'left', marginLeft: '10%', marginTop: '22%' }} className='positionViewBoxHomePos'>
-    //     <MenuComponent />
-    //     <LoginComponent className="logInComponentNone" />
-    //     <h1 className='h3CutomMarginH'>News
-    //         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    //         <Popover content={formAddPopOver} placement="left" title="Add module" trigger="click" className='popOverStyleBtn iconpos37 ' >
-    //             <Icon icon="ant-design:plus-circle-filled" className='iconpos3 otherModIconSize' />
-    //         </Popover>
-
-
-    //     </h1>
-
-    // </div>
-
 }
 
 export default News;

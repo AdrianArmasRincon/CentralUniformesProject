@@ -5,30 +5,43 @@ import './RoleComponent.css'
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { Button, Popover, notification } from 'antd';
+import { EditFilled} from '@ant-design/icons';
 
 function RoleComponent() {
   const buttonStyle = {
-        backgroundColor: '#69C04C',
-        borderColor: '#69C04C',
-        color: 'white',
-        width: '25%',
-        borderRadius: '40px',
-        marginTop: '5%',
-        marginBottom: '5%',
-        marginLeft: '38%',
-        marginRight: 'auto',
-    };
-    const buttonStyle2 = {
-        backgroundColor: '#69C04C',
-        borderColor: '#69C04C',
-        color: 'white',
-        width: '50%',
-        borderRadius: '40px',
-        marginTop: '2%',
-        marginBottom: '5%',
-        marginLeft: '28%',
-        marginRight: 'auto',
-      };
+    backgroundColor: 'red',
+    borderColor: 'red',
+    color: 'white',
+    width: '15%',
+    borderRadius: '40px',
+    marginTop: '5%',
+    marginBottom: '5%',
+    marginLeft: '15%',
+    marginRight: '5%',
+  };
+  const buttonStyle3Form = {
+    backgroundColor: '#69C04C',
+    borderColor: '#69C04C',
+    color: 'white',
+    width: '50%',
+    borderRadius: '40px',
+    marginTop: '5%',
+    marginBottom: '5%',
+    marginLeft: '28%',
+    marginRight: '10%',
+  };
+  const buttonStyle4Form = {
+    backgroundColor: 'red',
+    borderColor: 'red',
+    color: 'white',
+    width: '50%',
+    borderRadius: '40px',
+    marginTop: '2%',
+    marginBottom: '5%',
+    marginLeft: '28%',
+    marginRight: 'auto',
+  };
+
   //set
   const [Roles, setRoles] = useState([]);
   const [open, setOpen] = useState([]);
@@ -129,9 +142,9 @@ function RoleComponent() {
         required />
         <br /><br />
 
-        <Button  type="primary" htmlType="submit" value="Update" style={buttonStyle2} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
+        <Button  type="primary" htmlType="submit" value="Update" style={buttonStyle3Form} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
         &nbsp;&nbsp;
-        <Button onClick={() => hide()} type="primary" style={buttonStyle2} className='BtnMobileCssUpt BtnTabletCssUpt' >Cancel</Button>
+        <Button onClick={() => hide()} type="primary" style={buttonStyle4Form} className='BtnMobileCssUpt BtnTabletCssUpt' >Cancel</Button>
       </form>
     </div>
   );
@@ -142,7 +155,7 @@ function RoleComponent() {
     <div className="block">
       {Array.isArray(Roles) &&
         Roles.map((rol, index) => (
-          <div key={rol.id} className='block'>
+          <div key={rol.id} style={{ marginBottom: '20px' }} className='block2'>
             {/* Agrega un salto de línea antes del div */}
             {'\n'}
             <div className='block-section stat'>
@@ -152,17 +165,24 @@ function RoleComponent() {
               <p className='componentId contIdCent'>
   
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Button onClick={() => handleDelete(rol.id)} className='popOverStyleBtn'>
+                {/* <Button onClick={() => handleDelete(rol.id)} className='popOverStyleBtn'>
                   <Icon icon="ant-design:delete-filled" className='iconpos3 iconPosBinMod otherModIconSize ' />
-                </Button>
+                </Button> */}
+
+                
+                {/* edit */}
                 <Popover content={formPopOverEdit(rol, index)}
                   forceRender={true} open={open[index]}
                   onOpenChange={(e) => handleOpenChange(e, index)}
                   placement="left" title="Update rol"
-                  trigger="click" className='popOverStyleBtn'>
-  
-                  <Icon icon="ant-design:edit-filled" className='iconpos1 editModIconSize' />
+                  trigger="click" className='iconRolSize'>
+                   <EditFilled className='iconBorderEditM2'/>
                 </Popover>
+
+                {/* delete */}
+                <Button onClick={() => handleDelete(rol.id)} type="primary" className='mobileBtnPos mobiledelete' style={buttonStyle}>
+                  Delete
+                </Button>
               </p>
             </div>
           </div>

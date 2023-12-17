@@ -5,7 +5,6 @@ import { Button, Carousel, Popover } from 'antd';
 //Components
 import MenuComponent from '../Components/menuComponent/menuComponent';
 //import ModuleListComponent from '../Components/ModuleListComponent/ModuleListComponent';
-import LoginComponent from '../Components/LoginComponent/LoginComponent'
 import SearchInput from '../Components/searchInputComponent/searchInputComponent';
 import UserComponent from '../Components/UserComponent/UserComponent';
 
@@ -100,7 +99,7 @@ function UsersModuleList() {
       <h3 className='mySubtitleModules'>Users list
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
         {/* FALTA FUNCIONALIDAD -------------------------------------------------------------------------------------------------------- */}
-        <Popover content={formPopOverAdd} placement="left" title="Update module" trigger="click" className='popOverStyleBtn '>
+        {/* <Popover content={formPopOverAdd} placement="left" title="Update module" trigger="click" className='popOverStyleBtn '>
           <Icon icon="ant-design:edit-filled"  className='iconpos1 editModIconSize' />
         </Popover>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -110,9 +109,8 @@ function UsersModuleList() {
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Popover content={formPopOverDelete} placement="left" title="Delete module" trigger="click" className='popOverStyleBtn'>
           <Icon icon="ant-design:delete-filled" className='iconpos3 iconPosBinMod otherModIconSize' />
-        </Popover>
+        </Popover> */}
       </h3>
-      <LoginComponent className="customLoginModPos"/>
       <div className='customBorderListMod customboxList2'>
         <UserComponent />
         <modulesList />

@@ -4,24 +4,50 @@ import { Button, Popover, notification } from 'antd';
 import { useNavigate, Link } from "react-router-dom";
 import './moduleComponent.css'
 import { Icon } from '@iconify/react';
+import { EditFilled} from '@ant-design/icons';
+
 
 
 
 function App() {
   const buttonStyle = {
-    backgroundColor: '#69C04C',
-    borderColor: '#69C04C',
+    backgroundColor: 'red ',
+    borderColor: 'red',
     color: 'white',
-    width: '25%',
+    width: '50%',
     borderRadius: '40px',
     marginTop: '5%',
     marginBottom: '5%',
-    marginLeft: '38%',
-    marginRight: 'auto',
+    marginLeft: '0',
+    marginRight: '10%',
+    opacity: '100%' ,
   };
   const buttonStyle2 = {
     backgroundColor: '#69C04C',
     borderColor: '#69C04C',
+    color: 'white',
+    width: '50%',
+    borderRadius: '40px',
+    marginTop: '5%',
+    marginBottom: '5%',
+    marginLeft: '0',
+    marginRight: '10%',
+    opacity: '100%' ,
+  };
+  const buttonStyle5Form = {
+    backgroundColor: '#69C04C',
+    borderColor: '#69C04C',
+    color: 'white',
+    width: '50%',
+    borderRadius: '40px',
+    marginTop: '5%',
+    marginBottom: '5%',
+    marginLeft: '28%',
+    marginRight: '10%',
+  };
+  const buttonStyle6Form = {
+    backgroundColor: 'red',
+    borderColor: 'red',
     color: 'white',
     width: '50%',
     borderRadius: '40px',
@@ -126,7 +152,7 @@ function App() {
     localStorage.setItem('id', id);
     navigate("/appRolview");
   };
-  // UPDATE
+  // UPDATEF
   const formPopOverEdit = (app, index) => (
     <div>
       <p></p>
@@ -143,14 +169,9 @@ function App() {
         <input type="file" className='customInputHome' id="icon" accept="image/*" placeholder={app.icon}
           onChange={(e) => setNewApp({ ...newApp, icon: e.target.files[0] })}
            />
-        <br /><br />
-
-
-
-
-        <Button type="primary" htmlType="submit" style={buttonStyle} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
+        <Button type="primary" htmlType="submit" style={buttonStyle5Form} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
         &nbsp;&nbsp;
-        <Button onClick={() => hide()} type="primary" className='ButtonDelete' >Cancel</Button>
+        <Button onClick={() => hide()} type="primary" style={buttonStyle6Form} className='ButtonDelete' >Cancel</Button>
       </form>
     </div>
   );
@@ -161,24 +182,34 @@ function App() {
     <div className="block">
       {Array.isArray(Applications) &&
         Applications.map((application, index) => (
-          <div key={application.id} style={{ marginBottom: '20px' }} className='block'>
-            <div className='list-applications'>
-              <img className='borders applicationIcon' alt='icon1' src={`http://localhost:8000/images/${application.icon}`}></img>
+          <div key={application.id} style={{ marginBottom: '20px' }} className='block2'>
+            <div>
+              <img className='appicon' alt='icon1' src={`http://localhost:8000/images/${application.icon}`}></img>
             </div >
-            <div className='list-applications'>
-              <p className='borders'>{application.URL}</p>
+            <div>
+              <h3 className='infosizeUrl'>{application.URL}</h3>
             </div >
-            <div className='list-applications email-space'>
-              <p className='borders'>
-                <Button onClick={() => handleDelete(application.id)} type="primary" className='ButtonDelete'>Delete</Button>
-                &nbsp;&nbsp;
-                <Popover content={formPopOverEdit(application, index)} placement="left" title="Update module" trigger="click" className='popOverStyleBtn' 
+            <div>
+              <h3 className='borders'>
+                 {/* edit */}
+                 <Popover content={formPopOverEdit(application, index)} placement="left" title="Update module" trigger="click" className=' customposiconmodule ' 
                 forceRender={true} open={open[index]} onOpenChange={(e) => handleOpenChange(e, index)}>
-                  <Icon icon="ant-design:edit-filled"  className='iconpos1 editModIconSize' />
+                  <EditFilled className='iconBorderEditM'/>
                 </Popover>
+
+                {/* delete */}
+                <Button onClick={() => handleDelete(application.id)} type="primary" style={buttonStyle} className="mobileBtnPos">
+                  Delete
+                  </Button>
                 &nbsp;&nbsp;
-                <Button onClick={() => handleRoles(application.id)} type="primary">Roles</Button>
-              </p>
+                
+                {/* Roles */}
+                &nbsp;&nbsp;
+                <Button onClick={() => handleRoles(application.id)} style={buttonStyle2} type="primary">Roles</Button>
+              
+               
+
+              </h3>
             </div>
           </div>
 
@@ -188,17 +219,5 @@ function App() {
   );
 
 };
-/*Codigo de la creacion de modulo*/
-/*Poner nombres de los campos metidos cogidos de la bdd*/
-/* 
-<div>
-  <Block
-    imgSrc="/logo192.png"
-    title1="Título 1"
-    description="Descripción del bloque"
-    permissionRole="Título rol"
-  />
-</div>
-*/
 <div></div>
 export default App;

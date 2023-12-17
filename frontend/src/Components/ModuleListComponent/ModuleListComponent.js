@@ -45,10 +45,10 @@ function ModuleListComponent() {
           if (!addedAppIds.has(currentAppId)) {
             const appRolesData = await loadRoleApplication(currentAppId);
             console.log(`Application ${currentAppId} Roles`, appRolesData);
-        
+
             // Lógica de comparación
             console.log(userRoleIds);
-        
+
             let commonRoles = [];
             for (let x = 0; x < appRolesData.length; x++) {
               let role = appRolesData[x];
@@ -56,7 +56,7 @@ function ModuleListComponent() {
               console.log(role.id);
               console.log("userrole: ");
               console.log(userRoleIds);
-        
+
               // Add a check for undefined before accessing properties
               if (role && role.id !== undefined) {
                 const userRoleValues = Object.values(userRoleIds);
@@ -69,10 +69,10 @@ function ModuleListComponent() {
               console.log("commonRoles: ");
               console.log(commonRoles);
             }
-        
+
             console.log(userRoleIds)
             console.log(`Common Roles for Application ${currentAppId}`, commonRoles);
-        
+
             if (commonRoles.length > 0) {
               console.log(`Adding Application ${currentAppId} to newAppRoles`);
               newAppRoles.push({ data: appData[i], commonRoles });
@@ -87,7 +87,7 @@ function ModuleListComponent() {
 
       } catch (error) {
         console.error('Error:', error);
-        // Manejar errores aquí
+        // Manejar errores aquí 
       }
     };
 
@@ -102,60 +102,47 @@ function ModuleListComponent() {
   }, []);
 
   return (
-    // <div className="menu">
-
-    //   <ul>
-    //     <li><button className='IconGoBack' onClick={() => navigate(-1)}><RollbackOutlined /></button></li>
-    //     <li><a href='/'><HomeOutlined /></a></li>
-    //     {Array.isArray(appRoles) &&
-    //       appRoles.map((app, index) => (
-    //         <li key={index}>
-    //           <a href={`${app.data.URL}`}>
-    //             <img
-    //               className='menuIcon'
-    //               alt={`icon${index}`}
-    //               src={`http://localhost:8000/images/${app.data.icon}`}
-    //             />
-    //           </a>
-    //         </li>
-    //       ))}
-    //   </ul>
-    // </div>
     <div className="app-container-module-list">
-      <div>
-        {/* Admin user log in */}
+
+      <ul className='listStylecustomed'>
+        {/* log in */}
         <Link to="/LogIn">
-          <Icon icon="ant-design:smile-filled" color="#69c04c" className='LogInIconSideBar'/>
+          <Icon icon="ant-design:smile-filled" color="#69c04c" className='LogInIconSideBar' />
         </Link>
-      </div>
-      {/* Admin home */}
-      <div className="imageMargin">
-        <Link to="/">
-          <Icon icon="ant-design:home-filled" color="#000000" className="iconSizeSideBar"/>
-        </Link>
-      </div>
-      {/* Admin user edit */}
-      <div className="imageMargin">
-        <Link to="/Modules">
-          <Icon icon="ant-design:area-chart-outlined" color="#000000" className="iconSizeSideBar"/>
-        </Link>
-        {/* admin added modules */}
-        {/*
-        */}
-      </div>
-      {/* Admin user edit */}
-      <div className="imageMargin">
-        <Link to="/Users">
-          <Icon icon="bxs:user" color="#000000" className="iconSizeSideBar"/>
-        </Link>
-      </div>
-      {/* Admin rol edit */}
-      <div className="imageMargin">
-        <Link to="/roles">
-          <Icon icon="ant-design:trademark-circle-filled" color="#000000" className="iconSizeSideBar"/>
-        </Link>
-      </div>
+        {/* go back */}
+        <li><button className='IconGoBack' onClick={() => navigate(-1)}><Icon icon="ant-design:caret-left-filled" width="60%" height="60%" /></button></li>
+        {/* home */}
+        <li><a href='/'><Icon icon="ant-design:home-filled" color="#000000" className="iconSizeSideBar" /></a></li>
+        {/* Manual */}
+        <li><a href='/userManual/CentralUniformesManual.html' target='Blank'><Icon icon="ant-design:question-circle-filled" color="#000000" className="iconSizeSideBar imageMargin" /></a></li>
+        {/* Rest of the apps */}
+        {Array.isArray(appRoles) &&
+          appRoles.map((app, index) => (
+            <li key={index}>
+              <a href={`${app.data.URL}`}>
+                <img
+                  className='iconSizeSideBar imageMargin'
+                  alt={`icon${index}`}
+                  src={`http://localhost:8000/images/${app.data.icon}`}
+                />
+              </a>
+            </li>
+          ))}
+      </ul>
     </div>
+
+
+
+    //       Modules
+
+    //       Users
+
+    //       roles
+
+    //       roles
+
+    //       newsView
+
   );
 }
 

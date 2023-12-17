@@ -7,7 +7,6 @@ import { Icon } from '@iconify/react';
 import { EditFilled } from '@ant-design/icons';
 //Components
 import MenuComponent from '../Components/menuComponent/menuComponent';
-import LoginComponent from '../Components/LoginComponent/LoginComponent';
 
 function Home(props) {
   const [News, setNews] = useState([]);
@@ -55,10 +54,8 @@ const onChange = (currentSlide) => {
   return (
     <div style={{ textAlign: 'left', marginLeft: '10%', marginTop: '22%' }} className='positionViewBoxHomePos'>
       <MenuComponent/> 
-      <LoginComponent className="logInComponentNone"/>
       <h1 className='h3CutomMarginH'>News
       </h1>
-
 
       <Carousel autoplay autoplaySpeed={2000} slidesToShow={1} className='carouselPos'>
       {Array.isArray(News) &&

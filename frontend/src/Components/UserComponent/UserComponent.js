@@ -5,6 +5,7 @@ import { Button, Popover, notification } from 'antd';
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import { EditFilled} from '@ant-design/icons';
 
 
 function UserComponent() {
@@ -12,23 +13,45 @@ function UserComponent() {
     backgroundColor: '#69C04C',
     borderColor: '#69C04C',
     color: 'white',
-    width: '30%',
+    width: '15%',
     borderRadius: '40px',
-    marginTop: '2%',
+    marginTop: '5%',
     marginBottom: '5%',
-    marginLeft: '38%',
-    marginRight: 'auto',
+    marginLeft: '28%',
+    marginRight: '5%',
   };
   const buttonStyle2 = {
+    backgroundColor: 'red',
+    borderColor: 'red',
+    color: 'white',
+    width: '15%',
+    borderRadius: '40px',
+    marginTop: '5%',
+    marginBottom: '5%',
+    marginLeft: '28%',
+    marginRight: '5%',
+  };
+  const buttonStyle3Form = {
     backgroundColor: '#69C04C',
     borderColor: '#69C04C',
+    color: 'white',
+    width: '50%',
+    borderRadius: '40px',
+    marginTop: '5%',
+    marginBottom: '5%',
+    marginLeft: '28%',
+    marginRight: '10%',
+  };
+  const buttonStyle4Form = {
+    backgroundColor: 'red',
+    borderColor: 'red',
     color: 'white',
     width: '50%',
     borderRadius: '40px',
     marginTop: '2%',
     marginBottom: '5%',
     marginLeft: '28%',
-    marginRight: 'auto',
+    marginRight: '10%',
   };
 
   const [Users, setUsers] = useState([]);
@@ -87,7 +110,7 @@ function UserComponent() {
   const handleDelete = async (id) => {
     // Call the deleteEmployee function to delete an employee
     await deleteUser(id);
-    notification.success({message:'User deleted successfully', duration:5})
+    notification.success({ message: 'User deleted successfully', duration: 5 })
   };
 
   const handleUpdate = async (user) => {
@@ -109,11 +132,11 @@ function UserComponent() {
         email: prevUser.email || user.email,
         password: prevUser.password || user.password,
       }));
-  
+
       console.log("Datos del formulario:", newUser);
       await updateUser(user.id, newUser);
       console.log("datos obtenidos");
-  
+
       // Reinicia los valores del formulario
       setNewUser({
         name: '',
@@ -121,13 +144,13 @@ function UserComponent() {
         password: '',
       });
       //Alert
-      notification.success({message:'User updated correcly',duration:5})
+      notification.success({ message: 'User updated correcly', duration: 5 })
       const updatedApp = await getAllUsers();
       setUsers(updatedApp);
 
     } catch (error) {
       console.error('Error al actualizar el usuario:', error);
-      notification.error({message:'A problem occurs trying to update user', duration:5})
+      notification.error({ message: 'A problem occurs trying to update user', duration: 5 })
     }
   };
 
@@ -137,96 +160,82 @@ function UserComponent() {
     navigate("/userRolview");
   };
 
-  
+
   //EDIT
-  const UpdateForm  = (user, index) => (
+  const UpdateForm = (user, index) => (
     <div>
       <p></p>
       <form onSubmit={(e) => { e.preventDefault(); handleUpdate(user); }}
-      action="#" method="post" enctype="multipart/form-data" className='customFormMo customFormHomeStyle'>
+        action="#" method="post" enctype="multipart/form-data" className='customFormMo customFormHomeStyle'>
 
         <label htmlFor="name" className='customInputHome'>Name:</label>
-        <input type="text" className='customInputHome'  id="name"
+        <input type="text" className='customInputHome' id="name"
           placeholder={user.name}
           value={newUser.name}
           onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
-         />
+        />
         <br /><br />
 
         <label htmlFor="email" className='customInputHome'>Email:</label>
-        <input type="text" className='customInputHome'  id="email"
+        <input type="text" className='customInputHome' id="email"
           placeholder={user.email}
           value={newUser.email}
           onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
-         />
+        />
         <br /><br />
 
         <div>
-        <label htmlFor="password" className='customInputHome'>Password:</label><br />
-        <input
-          className='customInputHome'
-          type="password"
-          id="password"
-          placeholder={user.password}
-          onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
-        />
-      </div>
-        <Button  type="primary" htmlType="submit" style={buttonStyle} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
+          <label htmlFor="password" className='customInputHome'>Password:</label><br />
+          <input
+            className='customInputHome'
+            type="password"
+            id="password"
+            placeholder={user.password}
+            onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
+          />
+        </div>
+        <Button type="primary" htmlType="submit" style={buttonStyle3Form} className='BtnMobileCssUpt BtnTabletCssUpt'>Update</Button >
         &nbsp;&nbsp;
-        <Button onClick={() => hide()} type="primary" className='BtnMobileCssUpt BtnTabletCssUpt' >Cancel</Button>
+        <Button onClick={() => hide()} type="primary"  style={buttonStyle4Form} className='BtnMobileCssUpt BtnTabletCssUpt' >Cancel</Button>
       </form>
     </div>
   );
 
 
-    return (
+  return (
     /*Codigo del block de modulo*/
-      <div className="block">
-        <div className="block-section stat" id="stat1">
-          {/* With an ant icon */}
-          {/* <Icon icon="ant-design:smile-filled" color="#000000" width="5vh" height="5vh" /> */}
-        </div>
-
-        <div className="block-section stat" id="stat2">
-          <h2 className='customH2'>Name:</h2>  {/* <h3>{title1}</h3> */}
-        </div>
-
-        <div className="block-section stat" id="stat3">
-          <p className='customP'>Email:</p>{/* <p>{description}</p> */}
-        </div>
-        {Array.isArray(Users) &&
+    <div className="block">
+      {Array.isArray(Users) &&
         Users.map((user, index) => (
-          <div key={user.id} style={{ marginBottom: '20px' }} className='block'>
-            <div className='block-section stat'>
-              <p className='customH2'>{user.name}</p>
+          <div key={user.id} style={{ marginBottom: '20px' }} className='block2'>
+            <div>
+              <h2 className='customH2'>{user.name}</h2>
             </div >
             <div className='block-section stat'>
-              <p className='customP'>{user.email}</p>
+              <p className='customP customp2'>{user.email}</p>
             </div>
             <div className='block-section stat'>
-              <p className='customP'>
-                <Button onClick={() => handleDelete(user.id)} type="primary" className='BtnMobileCssUpt BtnTabletCssUpt'>Delete</Button>
+              <p className='customP customp2'>
+                {/* delete */}
+                <Button onClick={() => handleDelete(user.id)} type="primary" style={buttonStyle2} className='BtnMobileCssUpt BtnTabletCssUpt mobileBtnSUC' >
+                  Delete
+                </Button>
                 &nbsp;&nbsp;
-                <Popover
-                  content={UpdateForm(user, index)}
-                  trigger="click"
-                  forceRender={true}
-                  open={open[index]}
-                  onOpenChange={(e) => handleOpenChange(e, index)}
-                >
-                  <Button type="primary" className='ButtonUpdate'>Update</Button>
+                {/* Update */}
+                <Popover content={UpdateForm(user, index)} placement="left" title="Update module" trigger="click" className='customposiconmodule customposiconuser ' 
+                  forceRender={true} open={open[index]} onOpenChange={(e) => handleOpenChange(e, index)}>
+                  <EditFilled className='iconBorderEditM mobilepositionCUser '/>
                 </Popover>
+                {/* roles */}
                 &nbsp;&nbsp;
-                <Button onClick={() => handleRoles(user.id)} type="primary">Roles</Button>
+                <Button onClick={() => handleRoles(user.id)} style={buttonStyle}  className="rolesbtnUserMobile BtnTabletCssUpta" type="primary">Roles</Button>
               </p>
             </div>
           </div>
-
-
         ))}
     </div>
-    );
-    
-  };
-    <div></div>
-export default UserComponent ;
+  );
+
+};
+<div></div>
+export default UserComponent;

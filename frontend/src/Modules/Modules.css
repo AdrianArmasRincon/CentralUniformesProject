@@ -165,6 +165,8 @@ body {
         display:initial;
         margin-left: 5%;
         margin-right: -5%;
+        width: 100px !important;
+        height: 100px !important;
     }
 
     .iconPosBinMod{

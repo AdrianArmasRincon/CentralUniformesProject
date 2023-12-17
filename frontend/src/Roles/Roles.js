@@ -6,7 +6,6 @@ import { Button, Popover, notification } from 'antd';
 import MenuComponent from '../Components/menuComponent/menuComponent';
 import { getAllRoles, getRolById, createRol, updateRol, deleteRol } from '../services/rolService';
 //import ModuleListComponent from '../Components/ModuleListComponent/ModuleListComponent';
-import LoginComponent from '../Components/LoginComponent/LoginComponent'
 import SearchInput from '../Components/searchInputComponent/searchInputComponent';
 import RoleComponent from '../Components/RoleComponent/RoleComponent';
 
@@ -67,15 +66,15 @@ function Roles() {
         backgroundColor: '#69C04C',
         borderColor: '#69C04C',
         color: 'white',
-        width: '25%',
+        width: '50%',
         borderRadius: '40px',
         marginTop: '5%',
         marginBottom: '5%',
-        marginLeft: '38%',
+        marginLeft: '28%',
         marginRight: 'auto',
     };
     const buttonStyle2 = {
-        backgroundColor: '#69C04C',
+        backgroundColor: 'red',
         borderColor: '#69C04C',
         color: 'white',
         width: '50%',
@@ -102,9 +101,9 @@ function Roles() {
                  />
                 <br /><br />
 
-                <Button type="primary"  htmlType="submit" style={buttonStyle2} className='BtnMobileCssUpt BtnTabletCssUpt'>Create</Button>
+                <Button type="primary"  htmlType="submit" style={buttonStyle} className='BtnMobileCssUpt BtnTabletCssUpt'>Create</Button>
                 &nbsp;&nbsp;
-                <Button type="primary" onClick={hidec} className='BtnMobileCssUpt BtnTabletCssUpt'>Cancel</Button>
+                <Button type="primary" onClick={hidec} style={buttonStyle2}  className='BtnMobileCssUpt BtnTabletCssUpt'>Cancel</Button>
             </form>
         </div>
     );
@@ -125,7 +124,6 @@ function Roles() {
                 </Popover>
 
             </h3>
-            <LoginComponent />
             <div className='customBorderListMod customboxList2'>
                 <RoleComponent />
                 <modulesList />

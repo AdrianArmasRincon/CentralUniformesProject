@@ -105,7 +105,8 @@
     .shadow-su {}
 
     .terms-su {
-        margin-bottom: 4%;
+        margin-top: 10%;
+        margin-bottom: 0%;
         color: rgb(132, 132, 132);
     }
 
@@ -174,7 +175,9 @@
     }
 
     .goToLogIn {
-        margin-left: 10% !important;
+        margin-left: -20% !important;
+        justify-content: center;
+        text-align: center;
     }
 
     /* Tablet */

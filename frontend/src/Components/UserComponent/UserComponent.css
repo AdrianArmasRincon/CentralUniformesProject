@@ -7,3 +7,72 @@
     opacity: 100%;
     font-weight: 600;
 }
+.customposiconuser{
+    width: 5% !important;
+    margin-left: -35% !important;
+    margin-top: -10%;
+}
+
+.customp2{
+    margin-top: 1%;
+}
+
+.usericonStyle{
+    margin-top: 5%;
+    width: 5% ;
+}
+
+.BtnTabletCssUpta{
+    margin-left: 0% !important; 
+}
+.iconBorderEditM{
+    font-size: x-large;
+
+  }
+
+/* Add these styles to make the page responsive */
+  /* Tablet example: 768 * 1280 */
+  @media only screen and (min-width: 425px) and (max-width: 768px) {
+
+
+  }
+
+  /* Mobile example: 425 * 900 */
+  @media only screen and (max-width: 426px) {
+    .usericonStyle{
+        margin-top: -10% !important;
+        width: 15% !important;
+        height: 20% !important;
+        size: 200px !important;
+        margin-bottom: 20%;
+    }
+    .rolesbtnUserMobile{
+        margin-left: 0% !important;
+        width:50% !important;
+    }
+   
+    .DeletebtnUserMobile{
+        width: 50% !important;
+        margin-left: 10% !important;
+    }
+    .customposiconuser{
+        margin-right: -20% !important;
+    }
+
+    .iconpos1{
+        height: 10% !important;
+    } 
+    .iconBorderEditM{
+        font-size: x-large;
+      }
+      .mobilepositionCUser{
+        margin-left: 45% !important;
+        margin-right: 10% !important ;
+        width: 50% !important;
+      }
+
+      .mobileBtnSUC{
+        width: 50% !important;
+        margin-left: 3% !important; 
+      }
+  }

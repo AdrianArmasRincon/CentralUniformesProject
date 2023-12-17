@@ -41,26 +41,6 @@ function Login() {
     marginBottom: '5%',
   };
 
-
-  // const validateForm = (e) => {
-  //   let isValid = true;
-
-  //   // Email validation
-  //   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-  //     setEmailError('Please enter a valid email address');
-  //     isValid = false;
-  //   }
-
-  //   // Password validation (you can add more criteria)
-  //   if (password.length < 6) {
-  //     setPasswordError('Password must be at least 6 characters long');
-  //     isValid = false;
-  //   }
-
-  //   return isValid;
-  // };
-
-
   return (
 
     <div className="vertical-split">  
@@ -70,8 +50,9 @@ function Login() {
             <img src="\assets\img\menulogo.png"
               alt="go home"
               style={{
-                width: '120%',
-                height: '120%',
+                width: '27%',
+                height: '27%',
+                marginLeft: '-60%' ,
               }}
             />
           </div>
@@ -80,8 +61,10 @@ function Login() {
           <img src="\assets\img\icon.png"
             alt="Central Uniformes logo"
             style={{
-              width: '80%',
-              height: '80%',
+              width: '70%',
+              height: '70%',
+              marginLeft: '11%' ,
+              
             }}
           />
         </div>

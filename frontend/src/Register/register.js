@@ -75,6 +75,7 @@ function RegisterForm() {
         justifyContent: 'center', 
         alignItems: 'center', 
         height: '100%', 
+        marginLeft: '15%',
     };
 
     const buttonStyle = {
@@ -156,7 +157,7 @@ function RegisterForm() {
                     </div>
 
                     <div className='container-su terms-su'>
-                        <label>
+                        {/* <label>
                         <div className='chckbxPdding'>
                             <input 
                                 className="checkbox-su"
@@ -168,7 +169,7 @@ function RegisterForm() {
                             
                             <p className='terms'>&nbsp;&nbsp;&nbsp;By signing up, you agree with privaty policy</p>
                             </div>
-                        </label>
+                        </label> */}
                         
                     </div>
                     <div style={buttonContainerStyle}>

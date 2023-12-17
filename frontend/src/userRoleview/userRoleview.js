@@ -5,6 +5,41 @@ import { getAllRoles } from '../services/rolService';
 import { Button, Popover, notification } from 'antd';
 import './userRoleview.css';
 function UserRoles() {
+    const buttonStyle = {
+        backgroundColor: '#69C04C',
+        borderColor: '#69C04C',
+        color: 'white',
+        width: '100%',
+        borderRadius: '40px',
+        marginTop: '2%',
+        marginBottom: '5%',
+        marginLeft: '0%',
+        marginRight: 'auto',
+    };
+    const buttonStyle2 = {
+        backgroundColor: 'red',
+        borderColor: '#69C04C',
+        color: 'white',
+        width: '100%',
+        borderRadius: '40px',
+        marginTop: '2%',
+        marginBottom: '5%',
+        marginLeft: '20%',
+        marginRight: 'auto',
+    };
+    
+        const buttonStyle3 = {
+            backgroundColor: '#69C04C',
+            borderColor: '#69C04C',
+            color: 'white',
+            width: '100%',
+            borderRadius: '40px',
+            marginTop: '2%',
+            marginBottom: '5%',
+            marginLeft: '20%',
+            marginRight: 'auto',
+        };
+
     const [UsersR, setUsersR] = useState({
         user_id: localStorage.getItem('id'),
         rol_id: '',
@@ -83,7 +118,7 @@ function UserRoles() {
 
     const generalForm = (
         <form onSubmit={(e) => { e.preventDefault(); handleCreate(); }}>
-            <div>
+            <div  className='formViewMargind'>
                 <label htmlFor="title">Id Rol:</label><br />
                 <input
                     type="text"
@@ -93,9 +128,9 @@ function UserRoles() {
                 />
             </div>
             <div><br />
-                <Button type="primary" htmlType="submit" className='ButtonUpdate'>Create</Button>
+                <Button type="primary" htmlType="submit" style={buttonStyle3} className='ButtonUpdate'>Create</Button>
                 &nbsp;&nbsp;
-                <Button type="primary" onClick={hidec} className='ButtonDelete'>Cancel</Button>
+                <Button type="primary" onClick={hidec} style={buttonStyle2} className='ButtonDelete'>Cancel</Button>
             </div>
         </form>
     );
@@ -114,7 +149,7 @@ function UserRoles() {
                     <br></br>
                     <Popover content={generalForm} trigger="click" open={openC}
                         onOpenChange={handleOpenChangec}>
-                        <Button type="primary" className='ButtonUpdate'>Create</Button>
+                        <Button type="primary" style={buttonStyle} className='ButtonUpdate'>Create</Button>
                     </Popover>
                 </div>
 
@@ -129,9 +164,9 @@ function UserRoles() {
                             <p className='borders'></p>
                         </div >
                         <div className='list-user_roles email-space'>
-                            <p className='borders'>
-                                <Button onClick={() => handleDelete(userR.id)} type="primary" className='ButtonDelete'>Delete</Button>
-                            </p>
+                            <h1 className='borders'>
+                                <Button onClick={() => handleDelete(userR.id)} type="primary" style={buttonStyle2} className='ButtonDelete'>Delete</Button>
+                            </h1>
                         </div>
                     </div>
 

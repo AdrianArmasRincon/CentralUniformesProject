@@ -10,6 +10,10 @@ body{
     height: 100vh; 
     background-color: #dcdcdc; 
     color: #000000;
+    overflow-y: scroll;
+  }
+  ::-webkit-scrollbar{
+    display: none;
   }
 
   .myMargin{

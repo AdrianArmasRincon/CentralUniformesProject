@@ -14,3 +14,49 @@
     align-items: center;
     width: 100%;
 }
+
+.iconposRoleComponent{
+    margin-left: 10%;
+}
+
+.iconRolSize{
+    width: 5% !important;
+    height: 5% !important;
+}
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+    .iconRolSize{
+        width:  10vw !important;
+        height: 10vw !important;
+        margin-left: -10%;
+    }
+
+    .iconposRoleComponent{
+        /* width: 250% !important;
+        height: 250% !important; */
+    }
+
+    .block2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 99%;
+        border-bottom: 0.6vh solid #ddd;
+        padding: 10px;
+        align-items: center;
+      }
+
+      .popOverStyleBtn{
+        width: 100px;
+        height: 100px;
+      }
+      .mobiledelete{
+        width: 50% !important;
+      }
+      .iconBorderEditM2{
+        margin-right: 20% !important;
+        font-size: x-large;
+        margin-left: 15%;
+      }
+    }
